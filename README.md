@@ -145,15 +145,15 @@ Enforced behaviour:
 
 ```mermaid
 flowchart TD
-    A[StartupDialog<br/>Enter Name] --> B{Lookup User in DataStore}
+    A[Startup Dialog] --> B{Lookup User in DataStore}
 
-    B -->|Patron| C[PatronWindow<br/>Catalogue + Loans + Holds]
-    B -->|Librarian| D[LibrarianWindow<br/>Placeholder]
-    B -->|Admin| E[AdminWindow<br/>Placeholder]
+    B -->|Patron| C[Patron Window]
+    B -->|Librarian| D[Librarian Window]
+    B -->|Admin| E[Admin Window]
 
-    C -->|Borrow / Return / Hold Ops| F[(DataStore)]
-    F --> G[Users (in-memory)]
-    F --> H[Items (in-memory)]
+    C -->|Borrow / Return / Holds| F[(DataStore)]
+    F --> G[Users]
+    F --> H[Items]
 ```
 
 ### 🗂 Key Components
