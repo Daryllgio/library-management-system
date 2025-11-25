@@ -461,4 +461,3 @@ Some natural next steps for this project:
 ## 📎 License
 
 > This project was originally developed as part of a course assignment.  
-> If you plan to reuse or open-source it, add an explicit license here (e.g. MIT, GPL) based on your needs.
