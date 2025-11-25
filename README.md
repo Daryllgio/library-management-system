@@ -431,33 +431,6 @@ These numbers make it a strong, concrete project entry on a resume or portfolio.
 
 ---
 
-## 🔮 Future Enhancements
-
-Some natural next steps for this project:
-
-- 💾 **Persistence layer**  
-  Replace the in-memory store with an SQLite or PostgreSQL backend (or use Qt’s `QSqlDatabase`).
-
-- 🧑‍💼 **Librarian features**
-  - Add/edit/remove catalogue items.
-  - Check for overdue items.
-  - Override loan caps for special cases.
-
-- 🛠 **Admin features**
-  - Configure rules (loan caps, loan period, fine rates).
-  - Generate summary reports (overdues, popular items, usage stats).
-
-- 🧪 **Unit testing**
-  - Add unit tests around `DataStore` operations (borrow/return/holds).
-  - Validate business rules independent of the UI.
-
-- 🎨 **UI improvements**
-  - Better styling and icons.
-  - Filter/search on the catalogue (by title, format, availability).
-  - Accessibility improvements (keyboard shortcuts, focus hints).
-
----
-
 ## 📎 License
 
 > This project was originally developed as part of a course assignment.  
