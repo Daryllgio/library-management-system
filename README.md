@@ -545,20 +545,5 @@ This walkthrough demonstrates how all of the main features—browsing, borrowing
   Even though only the patron role is fully implemented, the Startup dialog already routes different users to different windows (Patron, Librarian, Admin). This prevents a big architectural change later when librarian/admin features are added.
 
 ---
-
-## Possible Extensions
-
-Some natural next steps for this project:
-
-- Replace the in‑memory `DataStore` with a real database (for example, SQLite using Qt’s SQL module).
-- Implement **Librarian** features such as:
-  - adding, editing, and removing items from the catalogue,
-  - viewing and managing overdue loans.
-- Implement **Admin** features such as:
-  - changing lending rules (loan limits, loan length),
-  - generating statistics (most borrowed titles, total active loans).
-- Add **unit tests** around `DataStore` operations to verify that borrowing and hold rules are enforced correctly.
-- Improve the UI with search and filtering options so that patrons can quickly find items by title, creator, or format.
-
 This README is intended to be detailed enough that someone who has never seen the code can still understand **what the system models**, **how it behaves**, and **which parts of the code implement each responsibility**.
 
