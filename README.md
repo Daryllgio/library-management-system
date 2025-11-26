@@ -292,23 +292,16 @@ At a high level, the application is split into:
 
 ```mermaid
 flowchart TD
-    A[Startup dialog] --> B{Look up user in DataStore}
+    Start[Startup dialog] --> Lookup{Look up user in DataStore}
 
-    B -->|Patron| C[Patron window]
-    B -->|Librarian| D[Librarian window (placeholder)]
-    B -->|Admin| E[Admin window (placeholder)]
+    Lookup -->|Patron| PatronWin[Patron window]
+    Lookup -->|Librarian| LibrarianWin[Librarian window]
+    Lookup -->|Admin| AdminWin[Admin window]
 
-    C -->|Borrow / Return / Hold actions| F[(DataStore)]
-    F --> G[Users in memory]
-    F --> H[Items in memory]
+    PatronWin -->|Borrow / Return / Holds| Store[DataStore]
+    Store --> Users[Users in memory]
+    Store --> Items[Items in memory]
 ```
-
-If GitHub has trouble rendering the Mermaid diagram, the same idea in words is:
-
-1. The program starts at a **Startup dialog** where the user types a name.  
-2. The name is looked up in the **DataStore**.  
-3. Depending on the user’s role, a **Patron window**, **Librarian window**, or **Admin window** is opened.  
-4. The **Patron window** talks back to the **DataStore** to perform all borrow, return, and hold operations.
 
 ### Main Classes and Files
 
