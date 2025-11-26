@@ -528,22 +528,3 @@ This section walks through a complete example using one of the seeded patrons.
 
 This walkthrough demonstrates how all of the main features—browsing, borrowing, returning, and managing holds—fit together in practice.
 
----
-
-## Design Decisions
-
-- **In‑memory `DataStore` instead of a real database**  
-  For a first deliverable, an in‑memory store keeps the focus on modelling library behaviour without adding database configuration. The design makes it straightforward to replace `DataStore` with a persistence layer later.
-
-- **Separation between UI and rules**  
-  The Qt windows (dialogs) do not directly enforce borrowing limits or queue behaviour. They simply gather user input and pass it to `DataStore`. This keeps the rules in one place and makes the system easier to test and extend.
-
-- **Explicit modelling of library concepts**  
-  Types such as `User`, `Item`, `ItemStatus`, and `Rules` match real‑world library ideas like patrons, catalogue items, loans, holds, and lending policies. This makes it easier for someone new to the code to connect lines of C++ back to the domain.
-
-- **Multi‑role routing from the start**  
-  Even though only the patron role is fully implemented, the Startup dialog already routes different users to different windows (Patron, Librarian, Admin). This prevents a big architectural change later when librarian/admin features are added.
-
----
-This README is intended to be detailed enough that someone who has never seen the code can still understand **what the system models**, **how it behaves**, and **which parts of the code implement each responsibility**.
-
